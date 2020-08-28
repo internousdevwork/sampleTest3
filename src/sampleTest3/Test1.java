@@ -48,7 +48,7 @@ public class Test1 {
 		String[] weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
 
 		// 入力された前月を表示
-		// 入力された数が1月ならその前の年の12月を表示
+		// 入力された月が1月ならその前の年の12月を表示
 		if (month == 1) {
 			System.out.println(year +"年" + ":"  + "12月");
 		} else {
@@ -122,7 +122,7 @@ public class Test1 {
 		System.out.println("\n");
 
 		// 入力された翌月を表示
-		// 入力された数が12月なら次の年の1月を表示
+		// 入力された月が12月なら次の年の1月を表示
 		if (month == 12) {
 			System.out.println(year +"年" + ":" + "1月");
 		} else {
