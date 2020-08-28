@@ -23,7 +23,7 @@ public class Test1 {
 				if (year > 0) {
 					break;
 				}
-				System.out.println("西暦を正の整数で入力してください");
+				System.out.println("月を1から12の数値で入力してください");
 
 			} catch (InputMismatchException e) {
 				System.out.println("西暦を数値で入力してください");
