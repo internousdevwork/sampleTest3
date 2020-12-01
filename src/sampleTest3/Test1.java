@@ -17,15 +17,15 @@ public class Test1 {
 		// 西暦を入力
 		// 正しい数値が入力されるまで入力を繰り返す
 		System.out.println("表示したい年を西暦で入力してください");
-		while (true){
+		while(true) {
 			try {
 				year = new Scanner(System.in).nextInt();
-				if (year > 0) {
+				if(year > 0) {
 					break;
 				}
 				System.out.println("月を1から12の数値で入力してください");
 
-			} catch (InputMismatchException e) {
+			} catch(InputMismatchException e) {
 				System.out.println("西暦を数値で入力してください");
 			}
 		}
@@ -33,13 +33,13 @@ public class Test1 {
 		// 月を入力
 		// 正しい数値が入力されるまで入力を繰り返す
 		System.out.println("表示したい月を入力してください");
-		while (true){
+		while(true) {
 			try {
 				month = new Scanner(System.in).nextInt();
-				if (!(month < 1 || month > 12)) {
+				if(!(month < 1 || month > 12)) {
 					break;
 				}
-			} catch (InputMismatchException e) {
+			} catch(InputMismatchException e) {
 				System.out.println("月を数値で入力してください");
 			}
 		}
@@ -49,14 +49,14 @@ public class Test1 {
 
 		// 入力された前月を表示
 		// 入力された月が1月ならその前の年の12月を表示
-		if (month == 1) {
+		if(month == 1) {
 			System.out.println(year +"年" + ":"  + "12月");
 		} else {
 			System.out.println(year + "年" + ":" + (month - 1) + "月");
 		}
 
 		// 曜日を右寄せに表示
-		for (String s : weekday) {
+		for(String s : weekday) {
 			System.out.printf("%4s", s);
 		}
 		System.out.println();
@@ -71,13 +71,13 @@ public class Test1 {
 		int startIndex = cal.get(Calendar.DAY_OF_WEEK);
 
 		// 1日の曜日までスペースを表示
-		for (int i = 1; i < startIndex; i++) {
+		for(int i = 1; i < startIndex; i++) {
 			System.out.printf("%4s", "");
 		}
 
 		// 右寄せで日付を表示
 		// 土曜日の日付の場合は改行
-		for (int i = 1; i <= maxDay; i++) {
+		for(int i = 1; i <= maxDay; i++) {
 			System.out.printf("%4d", i);
 			cal.set(Calendar.DATE, i);
 			if(Calendar.SATURDAY == cal.get(Calendar.DAY_OF_WEEK)) {
@@ -89,7 +89,7 @@ public class Test1 {
 		// 入力された月を表示
 		System.out.println(year +"年" + ":" + month + "月");
 		// 曜日を右寄せに表示
-		for (String s : weekday) {
+		for(String s : weekday) {
 			System.out.printf("%4s", s);
 		}
 		System.out.println();
@@ -105,16 +105,16 @@ public class Test1 {
 		startIndex = cal.get(Calendar.DAY_OF_WEEK);
 
 		// 1日の曜日までスペースを表示
-		for (int i = 1; i < startIndex; i++) {
+		for(int i = 1; i < startIndex; i++) {
 			System.out.printf("%4s", "");
 		}
 
 		// 右寄せで日付を表示
 		// 土曜日の日付の場合は改行
-		for (int i = 1; i <= maxDay; i++) {
+		for(int i = 1; i <= maxDay; i++) {
 			System.out.printf("%4d", i);
 			cal.set(Calendar.DATE, i);
-			if (Calendar.SATURDAY == cal.get(Calendar.DAY_OF_WEEK)) {
+			if(Calendar.SATURDAY == cal.get(Calendar.DAY_OF_WEEK)) {
 				System.out.println("");
 			}
 		}
@@ -123,14 +123,14 @@ public class Test1 {
 
 		// 入力された翌月を表示
 		// 入力された月が12月なら次の年の1月を表示
-		if (month == 12) {
+		if(month == 12) {
 			System.out.println(year +"年" + ":" + "1月");
 		} else {
 			System.out.println(year +"年" + ":" + (month + 1) + "月");
 		}
 
 		// 曜日を右寄せに表示
-		for (String s : weekday) {
+		for(String s : weekday) {
 			System.out.printf("%4s", s);
 		}
 		System.out.println();
@@ -146,16 +146,16 @@ public class Test1 {
 		startIndex = cal.get(Calendar.DAY_OF_WEEK);
 
 		// 1日の曜日までスペースを表示
-		for (int i = 1; i < startIndex; i++) {
+		for(int i = 1; i < startIndex; i++) {
 			System.out.printf("%4s", "");
 		}
 
 		// 右寄せで日付を表示
 		// 土曜日の日付の場合は改行
-		for (int i = 1; i <= maxDay; i++) {
+		for(int i = 1; i <= maxDay; i++) {
 			System.out.printf("%4d", i);
 			cal.set(Calendar.DATE, i);
-			if (Calendar.SATURDAY == cal.get(Calendar.DAY_OF_WEEK)) {
+			if(Calendar.SATURDAY == cal.get(Calendar.DAY_OF_WEEK)) {
 				System.out.println("");
 			}
 		}
