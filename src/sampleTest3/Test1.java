@@ -52,11 +52,11 @@ public class Test1 {
 		if (month == 1) {
 			System.out.println(year +"年" + ":"  + "12月");
 		} else {
-		System.out.println(year + "年" + ":" + (month - 1) + "月");
+			System.out.println(year + "年" + ":" + (month - 1) + "月");
 		}
 
 		// 曜日を右寄せに表示
-		for(String s : weekday) {
+		for (String s : weekday) {
 			System.out.printf("%4s", s);
 		}
 		System.out.println();
@@ -89,7 +89,7 @@ public class Test1 {
 		// 入力された月を表示
 		System.out.println(year +"年" + ":" + month + "月");
 		// 曜日を右寄せに表示
-		for(String s : weekday) {
+		for (String s : weekday) {
 			System.out.printf("%4s", s);
 		}
 		System.out.println();
@@ -130,7 +130,7 @@ public class Test1 {
 		}
 
 		// 曜日を右寄せに表示
-		for(String s : weekday) {
+		for (String s : weekday) {
 			System.out.printf("%4s", s);
 		}
 		System.out.println();
@@ -160,5 +160,6 @@ public class Test1 {
 			}
 		}
 		System.out.println("\n");
+		
 	}
 }
