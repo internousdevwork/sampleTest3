@@ -23,7 +23,7 @@ public class Test1 {
 				if(year > 0) {
 					break;
 				}
-				System.out.println("月を1から12の数値で入力してください");
+				System.out.println("西暦を正の数で入力して下さい");
 
 			} catch(InputMismatchException e) {
 				System.out.println("西暦を数値で入力してください");
@@ -36,9 +36,11 @@ public class Test1 {
 		while(true) {
 			try {
 				month = new Scanner(System.in).nextInt();
-				if(!(month < 1 || month > 12)) {
+				if(1 <= month && month <= 12) {
 					break;
 				}
+				System.out.println("月を1から12までの数値で入力してください");
+				
 			} catch(InputMismatchException e) {
 				System.out.println("月を数値で入力してください");
 			}
