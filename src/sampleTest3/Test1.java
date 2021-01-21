@@ -23,7 +23,7 @@ public class Test1 {
 				if(year > 0) {
 					break;
 				}
-				System.out.println("西暦を正の数で入力して下さい");
+				System.out.println("西暦を正の整数で入力してください");
 
 			} catch(InputMismatchException e) {
 				System.out.println("西暦を数値で入力してください");
@@ -33,19 +33,17 @@ public class Test1 {
 		// 月を入力
 		// 正しい数値が入力されるまで入力を繰り返す
 		System.out.println("表示したい月を入力してください");
-		while(true) {
+		while(true){
 			try {
 				month = new Scanner(System.in).nextInt();
 				if(1 <= month && month <= 12) {
 					break;
 				}
-				System.out.println("月を1から12までの数値で入力してください");
-				
+				System.out.println("月を1から12の数値で入力してください");
 			} catch(InputMismatchException e) {
 				System.out.println("月を数値で入力してください");
 			}
 		}
-
 		// カレンダーに表示する曜日を変数に用意
 		String[] weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
 
